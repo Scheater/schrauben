@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindlinger - Schrauben-Zähler</title>
+
+    <!-- Verlinkung zur CSS-Datei -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schriftart für modernes Design -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon hinzufügen -->
+    <link rel="icon" href="mainlogo.png" type="image/png">
+</head>
+<body>
+    <!-- Header-Bereich -->
+    <header>
+        <div class="branding">
+            <!-- Ersetzen von Text durch Bilder -->
+            <img src="webbild1.png" alt="Webbild" class="header-image">
+        </div>
+    </header>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <div class="container">
+            <h2>Automatischer Schrauben-Zähler</h2>
+            <p class="description">
+                Gib die Werte ein, und die Anzahl der Teile wird automatisch berechnet.
+            </p>
+
+            <!-- Eingabefelder -->
+            <div class="input-group">
+                <label for="teilanzahl">Wähle die Anzahl der Teile:</label>
+                <select id="teilanzahl" onchange="aktualisiereBerechnung()">
+                    <option value="1">1 Teil</option>
+                    <option value="5">5 Teile</option>
+                    <option value="10">10 Teile</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="teilgewicht">Gewicht der gewählten Teile (in Gramm):</label>
+                <input type="number" id="teilgewicht" placeholder="z. B. 50" oninput="aktualisiereBerechnung()">
+            </div>
+
+            <div class="input-group">
+                <label for="gesamtgewicht">Gesamtgewicht aller Teile (in Gramm):</label>
+                <input type="number" id="gesamtgewicht" placeholder="z. B. 500" oninput="aktualisiereBerechnung()">
+            </div>
+
+            <!-- Ergebnisanzeige -->
+            <div id="ergebnis" class="result">
+                Gib die Werte ein, um die Anzahl der Teile zu berechnen.
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer-Bereich -->
+    <footer>
+        <p>© 2025 Kindlinger</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
