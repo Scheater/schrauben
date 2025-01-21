@@ -10,7 +10,7 @@ function aktualisiereBerechnung() {
 
     // Validierung der Eingaben
     if (isNaN(teilGewicht) || teilGewicht <= 0 || isNaN(gesamtGewicht) || gesamtGewicht <= 0) {
-        ergebnisElement.textContent = "Bitte gib gültige Werte ein.";
+        ergebnisElement.textContent = "Bitte gültigen Wert eingeben.";
         ergebnisElement.style.backgroundColor = "#e74c3c"; // Fehler rot
         return;
     }
@@ -22,6 +22,6 @@ function aktualisiereBerechnung() {
     const anzahlTeile = Math.floor(gesamtGewicht / gewichtProTeil);
 
     // Ergebnis anzeigen
-    ergebnisElement.textContent = `Das Gesamtgewicht entspricht etwa ${anzahlTeile} Teilen.`;
+    ergebnisElement.textContent = `${anzahlTeile} Teile`;
     ergebnisElement.style.backgroundColor = "#2980b9"; // Standardfarbe Blau
 }
