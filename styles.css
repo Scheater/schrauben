@@ -18,33 +18,12 @@ header {
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-/* Styling für die Bilder im Header */
+
 .header-image {
-    max-width: 726px; /* Passe die Größe des ersten Bildes an */
+    max-width: 100%; /* Bild passt sich automatisch an die Bildschirmgröße an */
     height: auto;
     display: block;
     margin: 0 auto;
-}
-
-.header-logo {
-    max-width: 50px; /* Logo kleiner als das Hauptbild */
-    height: auto;
-    display: block;
-    margin: 10px auto 0 auto;
-}
-
-header .branding h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-header .branding .slogan {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-top: 5px;
-    color: #dcdcdc;
 }
 
 /* Hauptinhalt */
@@ -96,20 +75,22 @@ input, select {
     width: 100%;
     padding: 15px;
     font-size: 1rem;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 8px;
-    background: #f9f9f9;
+    background: #f7f7f7;
     transition: all 0.3s ease;
+    box-sizing: border-box; /* Damit die Abstände richtig berechnet werden */
 }
 
 input:focus, select:focus {
     border-color: #2980b9;
-    box-shadow: 0 0 8px rgba(41, 128, 185, 0.3);
+    box-shadow: 0 0 8px rgba(41, 128, 185, 0.4); /* Weicher blauer Schatten */
     outline: none;
 }
 
 input::placeholder {
     color: #aaa;
+    font-size: 0.9rem;
 }
 
 /* Ergebnisanzeige */
@@ -132,4 +113,30 @@ footer {
     color: white;
     padding: 10px 0;
     font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Container passt sich an kleinere Bildschirme an */
+        padding: 20px;
+    }
+
+    .container h2 {
+        font-size: 1.8rem; /* Kleinere Schriftgröße für Überschriften */
+    }
+
+    .container .description {
+        font-size: 1rem; /* Kleinere Schriftgröße für Beschreibungen */
+    }
+
+    input, select {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .result {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
 }
